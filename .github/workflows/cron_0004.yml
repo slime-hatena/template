@@ -1,12 +1,7 @@
-name: 'cron: At 04:00'
+name: 'Label maintenance'
 on:
-  push:
-    branches:
-      - master
-
-# on:
-#   schedule:
-#     - cron:  '0 4 * * *'
+  schedule:
+    - cron:  '0 4 * * *'
 
 jobs:
   label_maintenance:
