@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
-      - name: Get @azu/github-label-setup
-        run: yarn global add @azu/github-label-setup
-      - name: Run github-label-setup
+      - name: Run @azu/github-label-setup
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: github-label-setup --token ${GITHUB_TOKEN} --dry-run
+        run: |
+          yarn global add @azu/github-label-setup
+          github-label-setup --token ${GITHUB_TOKEN}
