@@ -19,4 +19,4 @@ jobs:
       - name: Run github-label-setup
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: github-label-setup --token ${GITHUB_TOKEN} --dry-run
+        run: `yarn global bin`/github-label-setup --token ${GITHUB_TOKEN} --dry-run
