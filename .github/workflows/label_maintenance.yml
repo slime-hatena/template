@@ -14,8 +14,9 @@ jobs:
       - uses: actions/checkout@master
       - name: Get @azu/github-label-setup
         run: yarn global add @azu/github-label-setup
+      - run: cat .github/labels.json
       - name: Run github-label-setup
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          `yarn global bin`/github-label-setup --token ${GITHUB_TOKEN} --labels ./.github/labels.json
+          `yarn global bin`/github-label-setup --token ${GITHUB_TOKEN} --labels .github/labels.json
