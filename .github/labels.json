@@ -7,7 +7,7 @@
     {
         "name": "help wanted",
         "color": "e99695",
-        "description": "Extra attention is needed",
+        "description": "Extra attention is needed"
     },
     {
         "name": "good first issue",
