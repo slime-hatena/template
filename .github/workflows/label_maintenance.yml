@@ -1,7 +1,7 @@
 name: 'Label maintenance'
 on:
   schedule:
-    - cron:  '0 4 * * *'
+    - cron:  '0 18 * * *'
 
 jobs:
   label_maintenance:
@@ -11,6 +11,8 @@ jobs:
       - uses: actions/checkout@master
       - name: Get @azu/github-label-setup
         run: yarn global add @azu/github-label-setup
+      - run: pwd
+      - run: ls -la
       - name: Run github-label-setup
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
