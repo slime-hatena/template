@@ -1,10 +1,10 @@
 name: 'Label maintenance'
 on:
   push:
-    branches:
-      - master
+    paths:
+      - '.github/labels.json'
   schedule:
-    - cron:  '0 4 * * *'
+    - cron: '0 4 * * *'
 
 jobs:
   label_maintenance:
