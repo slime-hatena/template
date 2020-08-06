@@ -1,6 +1,10 @@
 name: 'Label maintenance'
 on:
+  push:
+    branches:
+      - master
   schedule:
+    # - cron:  '0 4 * * *'
     - cron:  '0 18 * * *'
 
 jobs:
@@ -17,4 +21,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          `yarn global bin`/github-label-setup --token ${GITHUB_TOKEN}
+          `yarn global bin`/github-label-setup --token ${GITHUB_TOKEN} --labels 
