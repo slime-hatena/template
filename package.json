@@ -8,5 +8,10 @@
   },
   "scripts": {
     "postinstall": "husky install"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write"
+    ]
   }
 }
