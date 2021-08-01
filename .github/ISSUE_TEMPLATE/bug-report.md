@@ -7,32 +7,36 @@ assignees: ''
 
 ---
 
-**Describe the bug**
+## Describe the bug
 <!-- A clear and concise description of what the bug is. -->
 
-**To Reproduce**
-<!--  Steps to reproduce the behavior: -->
-<!--  1. Go to '...' -->
-<!--  2. Click on '....' -->
-<!--  3. Scroll down to '....' -->
-<!--  4. See error -->
+## To Reproduce
+<!-- Steps to reproduce the behavior: -->
+<!--   1. Go to '...'                 -->
+<!--   2. Click on '....'             -->
+<!--   3. Scroll down to '....'       -->
+<!--   4. See error                   -->
 
-**Expected behavior**
+## Expected behavior
 <!-- A clear and concise description of what you expected to happen. -->
 
-**Screenshots**
+## Screenshots
 <!-- If applicable, add screenshots to help explain your problem. -->
 
-**Desktop (please complete the following information):**
- - OS: <!-- [e.g. Windows] -->
- - Browser: <!-- [e.g. chrome, edge] -->
- - Version: <!-- [e.g. chrome 92.0.4515.107/ edge 92.0.902.62] -->
+## Desktop
+<!-- (please complete the following information) -->
 
-**Smartphone (please complete the following information):**
- - Device: <!-- [e.g. iPhone 12] -->
- - OS: <!-- [e.g. iOS 14.6] -->
- - Browser <!-- [e.g. Safari] -->
- - Version <!-- [e.g. 14.1.1] -->
+- OS: <!-- [e.g. Windows] -->
+- Browser: <!-- [e.g. chrome, edge] -->
+- Version: <!-- [e.g. chrome 92.0.4515.107/ edge 92.0.902.62] -->
 
-**Additional context**
+## Smartphone
+<!-- (please complete the following information) -->
+
+- Device: a<!-- [e.g. iPhone 12] -->
+- OS: <!-- [e.g. iOS 14.6] -->
+- Browser <!-- [e.g. Safari] -->
+- Version <!-- [e.g. 14.1.1] -->
+
+## Additional context
 <!-- Add any other context about the problem here. -->
