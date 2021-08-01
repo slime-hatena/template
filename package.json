@@ -1,3 +1,9 @@
 {
-  "packageManager": "yarn@3.0.0"
+  "packageManager": "yarn@3.0.0",
+  "devDependencies": {
+    "husky": "^7.0.1"
+  },
+  "scripts": {
+    "init": "husky install"
+  }
 }
