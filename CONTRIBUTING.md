@@ -7,10 +7,10 @@ This is a guide that how to contribute to this repository. These are mostly guid
 
 If you have any problems, improvements, or questions, please send them to us via Issues.
 
-- [Bug report](issues/new?template=bug-report.md)
-- [Feature request](issues/new?template=feature_request.md)
-- [Question](issues/new?template=question.md)
-- [Other](issues/new)
+- [Bug report](/issues/new?template=bug-report.md)
+- [Feature request](/issues/new?template=feature_request.md)
+- [Question](/issues/new?template=question.md)
+- [Other](/issues/new)
 
 ## Pull requests
 
