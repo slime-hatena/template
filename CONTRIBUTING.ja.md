@@ -64,7 +64,7 @@ Pull requestsはいつでも大歓迎です。
 
 #### 型
 
-Must be one of the following:
+以下から選択してください。
 
 - **build**: ビルドシステムや外部依存関係に影響する変更。(スコープの例: yarn)
 - **ci**: CIの設定ファイルやスクリプトの変更。 (スコープの例: action)
