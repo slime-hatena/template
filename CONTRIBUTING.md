@@ -1,5 +1,7 @@
 # Contribution Guide
 
+\[en | [ja](./CONTRIBUTING.ja.md)\]
+
 Thanks for your interest for the project.  
 This is a guide that how to contribute to this repository. These are mostly guidelines, not rules. If you have suggestions to make it better, please let me know via Pull requests or Issues.
 
@@ -15,7 +17,8 @@ If you have any problems, improvements, or questions, please send them to us via
 ## Pull requests
 
 Pull requests are always welcome.  
-When your code is pulled in, it will be covered by the MIT license.
+When your code is pulled in, it will be covered by [LICENSE](./../../LICENSE).  
+Also, the [CODEOWNERS](./../../CODEOWNERS) has the right to change this license. If there are no serious problems, license is no change to be made.
 
 The changelog will be generated using the title of the pull request. Keep the following in mind.
 
@@ -79,9 +82,9 @@ The commit message is set based on "[Conventional Commits](https://www.conventio
 
 Must be one of the following:
 
-- **build**: Changes that affect the build system or external dependencies. (example scopes: yarn)
-- **ci**: Changes to our CI configuration files and scripts. (example scopes: action)
-- **chore**: !!!!!!!!!!
+- **build**: Changes that affect the build system. (example scope: yarn)
+- **ci**: Changes to our CI configuration files and scripts. (example scope: action)
+- **chore**: Changes that are not in build, ci, or any other. (example scope: git)
 - **docs**: Documentation only changes.
 - **feat**: A new feature.
 - **fix**: A bug fix.
