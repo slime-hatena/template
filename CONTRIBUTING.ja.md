@@ -1,6 +1,7 @@
+[English version.](./CONTRIBUTING.md)
+
 # Contribution Guide
 
-\[[en](./CONTRIBUTING.md) | ja\]
 
 プロジェクトに興味を持っていただきありがとうございます。  
 これはコントリビュートするためのガイドです。ガイドラインであり、絶対的なルールではありません。より良い改善がある場合は、Pull requestsやIssuesからお知らせください。

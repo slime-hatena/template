@@ -1,6 +1,7 @@
+[日本語版](./CONTRIBUTING.ja.md)
+
 # Contribution Guide
 
-\[en | [ja](./CONTRIBUTING.ja.md)\]
 
 Thanks for your interest for the project.  
 This is a guide that how to contribute to this repository. These are mostly guidelines, not rules. If you have suggestions to make it better, please let me know via Pull requests or Issues.
