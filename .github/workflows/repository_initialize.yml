@@ -22,6 +22,14 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+      - run: echo "AUTHOR=$(echo '${{ github.repository }}' | awk -F '/' '{print $1}')" >> $GITHUB_ENV
+      - run: echo "REPOSITORY=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')" >> $GITHUB_ENV
+      - name: Replace placeholder
+        run: |
+          find . -type f -print0 | xargs -0 sed -i -e "s/{author}/${{ env.AUTHOR }}/"
+          find . -type f -print0 | xargs -0 sed -i -e "s/{repository}/${{ env.REPOSITORY }}/"
+          git commit --allow-empty -m "Replace placeholder"
+          git push origin main
       - name: 'Create or Switch develop branch'
         run: |
           git fetch
