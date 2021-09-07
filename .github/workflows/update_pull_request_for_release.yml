@@ -15,12 +15,13 @@ jobs:
         with:
           fetch-depth: 0
       - name: 'Get latest name'
-        uses: pozetroninc/github-action-get-latest-release@master
+        uses: rez0n/actions-github-release@main
         id: get-latest
         continue-on-error: true
-        with:
+        env:
+          token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
-          excludes: 'prerelease, draft'
+          type: "stable"
       - name: Check first release
         id: check-latest
         run: |
