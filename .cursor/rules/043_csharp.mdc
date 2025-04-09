@@ -1,0 +1,75 @@
+# 043_csharp.mdc
+
+## 実装ルール
+
+### ドキュメントコメント
+
+すべてのクラスやメソッド、外部公開される変数には必ずxml形式のドキュメントコメントを記載してください。  
+また継承されたクラスなど根底の処理にドキュメントコメントがある場合、 `inheritdoc` を積極的に使用してください。
+
+```csharp
+  /// <summary>商品名から値段を取得する</summary>
+  /// <param name="name">値段を取得したい商品名</param>
+  /// <returns>商品が見つかればその値段、見つからなければ負数</returns>
+  public int GetPrice(string name)
+  {
+      int price = -1;
+      // 商品名から探してpriceを取得する処理
+      return price;
+  }
+  ```
+
+
+Reference: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/recommended-tags
+
+### Top-level statements の積極的な使用
+
+実装を行う際は可能な限り使用してください。
+
+Reference: https://learn.microsoft.com/en-us/dotnet/csharp/tutorials/top-level-statements
+
+### File Scoped Namespaces の積極的な使用
+
+実装を行う際は必ず使用してください。
+
+```csharp
+namespace MyNamespace;
+public class MyClass
+{
+    public void MyMethod()
+    {
+        // メソッドの実装
+    }
+}
+```
+
+Reference: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-10.0/file-scoped-namespaces
+
+### 状況に応じて `var` ではなく明示的な片づけを使用する
+
+`var` を使用することは許可しますが、明示的な型を使用することを推奨します。  
+
+#### `var` を使用する例
+
+右辺を見ることで型が明らかな場合は `var` を使用します。
+
+```csharp
+var count = 0;
+var list = new List<string>();
+var dictionary = new Dictionary<string, int>
+{
+    { "one", 1 },
+    { "two", 2 },
+    { "three", 3 }
+};
+```
+
+#### 明示的な型を使用する例
+
+右辺を見ても型が明らかでない場合は明示的な型を使用します。
+
+```csharp
+int count = service.getServiceCount();
+List<string> list = database.getUserNameList();
+Dictionary<string, int> dictionary = this.getLocalServiceStatus();
+```

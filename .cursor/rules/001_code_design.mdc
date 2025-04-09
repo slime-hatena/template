@@ -1,0 +1,92 @@
+# 001_code_design.mdc
+
+あなたが作成する設計やコード、作業手順はこれらの設計に基づいて行ってください。
+
+## 単一責任の原則
+
+- 関数が長くなりすぎた場合は、小さな関数に分割してください
+- ファイルが大きくなりすぎた場合は、小さなファイルに分割してください
+
+## TDD開発 (test-driven development)
+
+テスト駆動開発 (Test-Driven Development) は、コードを書く前にテストを書くソフトウェア開発手法です。この方法論を採用することで、設計の質を高め、バグの少ないコードを作成し、リファクタリングを安全に行うことができます。
+
+### TDDの基本サイクル
+
+```mermaid
+flowchart LR
+    Red[Red: 失敗するテストを書く] --> Green[Green: テストが通る最小限の実装をする]
+    Green --> Refactor[Refactor: コードを改善する]
+    Refactor --> Red
+```
+
+1. **Red**: まず失敗するテストを書く
+
+   - 必要な機能を明確に定義
+   - 期待する振る舞いをテストコードで表現
+   - この時点ではテストは失敗する（RED）
+
+2. **Green**: テストが通るように最小限の実装をする
+
+   - テストをパスさせるための最も単純な実装を行う
+   - パフォーマンスやコードの美しさより機能性を優先
+   - この時点でテストは成功する（GREEN）
+
+3. **Refactor**: コードをリファクタリングして改善する
+   - 重複を排除し、コードを整理
+   - 可読性とメンテナンス性を向上
+   - テストが依然として通ることを確認
+
+### TDDの重要な考え方
+
+- **テストは仕様である**: テストコードは実装の仕様を表現したもの
+- **最初に「何を」考え、次に「どのように」考える**: テストで「何を」達成すべきかを明確にしてから、「どのように」実装するかを考える
+- **小さなステップで進める**: 一度に大きな変更を行わず、小さな一歩ずつ進める
+- **テストカバレッジより意図のカバレッジを重視**: 単にコードラインをカバーするだけでなく、ビジネスロジックの意図を正確にテストする
+
+### テスト構造の原則
+
+#### AAA (Arrange-Act-Assert) パターン
+
+テストコードは以下の3つのセクションで構成することをお勧めします：
+
+1. **Arrange (準備)**: テストの前提条件を設定
+2. **Act (実行)**: テスト対象の機能を実行
+3. **Assert (検証)**: 期待する結果を検証
+
+```typescript
+// Jest を使用した例
+describe('UserService', () => {
+  it('should return user by id when user exists', async () => {
+    // Arrange
+    const mockUser = { id: 1, name: 'John Doe' };
+    const userRepositoryMock = {
+      findById: jest.fn().mockResolvedValue(mockUser),
+    };
+    const userService = new UserService(userRepositoryMock);
+
+    // Act
+    const result = await userService.getUserById(1);
+
+    // Assert
+    expect(result).toEqual(mockUser);
+    expect(userRepositoryMock.findById).toHaveBeenCalledWith(1);
+  });
+});
+```
+
+#### テスト名の命名規則
+
+良いテスト名は「状況→操作→結果」の形式で記述します：
+
+- 状況: 有効なユーザーIDが提供された場合
+- 操作: getUserByIdを呼び出すと
+- 結果: ユーザー情報を返すこと
+
+この場合以下のような名前を付けます:
+
+```typescript
+it('有効なユーザーIDが提供された場合_getUserByIdを呼び出すと_ユーザー情報を返すこと', async () => {
+  // テスト本体
+});
+```
