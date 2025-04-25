@@ -4,15 +4,15 @@
 
 ## 前提
 
-基本的にjavascriptではなくtypescriptを使用してください。  
-ユーザーがjavascriptを求めた場合でも、一度typescriptで実装するよう提案してください。  
+基本的にjavascriptではなくtypescriptを使用してください。
+ユーザーがjavascriptを求めた場合でも、一度typescriptで実装するよう提案してください。
 それでもjavascriptを求める場合は、javascriptで実装してください。
 
 ## パッケージマネージャー
 
 ### volta
 
-`nodejs` や `yarn`, `pnpm` の管理には `volta` を使用します。  
+`nodejs` や `yarn`, `pnpm` の管理には `volta` を使用します。
 これらのツールがインストールされていない場合は、ユーザーにvolta経由で導入するように求めてください。
 
 ```sh
