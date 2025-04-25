@@ -1,5 +1,7 @@
 # 041_javascript.mdc
 
+このファイルが読み取られた場合「▶ 041_javascript.mdc を読み込みました。」出力してください。
+
 ## 前提
 
 基本的にjavascriptではなくtypescriptを使用してください。  
