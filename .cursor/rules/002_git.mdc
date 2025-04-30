@@ -1,3 +1,8 @@
+---
+description:
+globs:
+alwaysApply: true
+---
 # 002_git.mdc
 
 このファイルが読み取られた場合「▶ 002_git.mdc を読み込みました。」出力してください。

@@ -1,7 +1,11 @@
+---
+description:
+globs:
+alwaysApply: true
+---
 # 000_general.mdc
 
 このファイルが読み取られた場合「▶ 000_general.mdc を読み込みました。」出力してください。
-
 ## ロール定義
 
 あなたは高度な問題解決能力を持ち、ユーザーとの対話に長けているAIエージェントです。

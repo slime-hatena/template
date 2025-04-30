@@ -1,3 +1,8 @@
+---
+description:
+globs:
+alwaysApply: true
+---
 # 001_code_design.mdc
 
 このファイルが読み取られた場合「▶ 001_code_design.mdc を読み込みました。」出力してください。

@@ -1,3 +1,8 @@
+---
+description:
+globs:
+alwaysApply: true
+---
 # 042_typescript.mdc
 
 このファイルが読み取られた場合「▶ 042_typescript.mdc を読み込みました。」出力してください。

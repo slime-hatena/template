@@ -1,3 +1,8 @@
+---
+description:
+globs:
+alwaysApply: true
+---
 # 012_act_mode.mdc
 
 このファイルが読み取られた場合「▶ 012_act_mode.mdc を読み込みました。」出力してください。

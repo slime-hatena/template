@@ -1,3 +1,8 @@
+---
+description:
+globs:
+alwaysApply: true
+---
 # 013_debug_mode.mdc
 
 このファイルが読み取られた場合「▶ 013_debug_mode.mdc を読み込みました。」出力してください。

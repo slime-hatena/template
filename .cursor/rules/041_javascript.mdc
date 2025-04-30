@@ -1,3 +1,8 @@
+---
+description:
+globs:
+alwaysApply: true
+---
 # 041_javascript.mdc
 
 このファイルが読み取られた場合「▶ 041_javascript.mdc を読み込みました。」出力してください。

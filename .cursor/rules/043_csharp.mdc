@@ -1,3 +1,8 @@
+---
+description:
+globs:
+alwaysApply: true
+---
 # 043_csharp.mdc
 
 このファイルが読み取られた場合「▶ 043_csharp.mdc を読み込みました。」出力してください。

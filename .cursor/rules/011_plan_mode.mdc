@@ -1,3 +1,8 @@
+---
+description:
+globs:
+alwaysApply: true
+---
 # 011_plan_mode.mdc
 
 このファイルが読み取られた場合「▶ 011_plan_mode.mdc を読み込みました。」出力してください。
