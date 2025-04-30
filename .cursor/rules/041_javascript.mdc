@@ -1,7 +1,7 @@
 ---
 description:
-globs:
-alwaysApply: true
+globs: *.js,*.ts,*.tsx
+alwaysApply: false
 ---
 # 041_javascript.mdc
 

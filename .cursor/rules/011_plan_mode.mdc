@@ -1,7 +1,7 @@
 ---
-description:
+description: ユーザーがモードを要求した場合、もしくはplan modeが適している場合
 globs:
-alwaysApply: true
+alwaysApply: false
 ---
 # 011_plan_mode.mdc
 

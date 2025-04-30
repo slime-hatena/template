@@ -1,7 +1,7 @@
 ---
 description:
-globs:
-alwaysApply: true
+globs: *.cs
+alwaysApply: false
 ---
 # 043_csharp.mdc
 

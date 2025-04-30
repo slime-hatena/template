@@ -1,7 +1,7 @@
 ---
-description:
+description: ユーザーがモードを要求した場合、もしくはact modeが適している場合
 globs:
-alwaysApply: true
+alwaysApply: false
 ---
 # 012_act_mode.mdc
 

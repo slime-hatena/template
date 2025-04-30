@@ -1,7 +1,7 @@
 ---
-description:
+description: ユーザーがモードを要求した場合、もしくはdebug modeが適していると思った場合
 globs:
-alwaysApply: true
+alwaysApply: false
 ---
 # 013_debug_mode.mdc
 
