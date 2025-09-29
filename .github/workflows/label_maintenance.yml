@@ -2,7 +2,7 @@ name: 'Label maintenance'
 on:
   issues:
     types:
-      - assigned
+      - opened
   pull_request:
     types:
       - opened
