@@ -11,5 +11,3 @@ on:
 jobs:
   call-reusable-ci:
     uses: slime-hatena/reusable-workflows/.github/workflows/label-maintenance.yaml@main
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # secret を渡す
