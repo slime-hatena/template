@@ -9,5 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-reusable-ci:
+  call-label-maintenance:
     uses: slime-hatena/reusable-workflows/.github/workflows/label-maintenance.yaml@main
+    with:
+      dry_run: false
