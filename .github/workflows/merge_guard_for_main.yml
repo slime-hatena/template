@@ -12,4 +12,4 @@ on:
 
 jobs:
   merge_guard:
-    uses: slime-hatena/reusable-workflows/.github/workflows/merge_guard_for_main.yaml@main
+    uses: slime-hatena/reusable-workflows/.github/workflows/merge_guard_for_main.yml@main

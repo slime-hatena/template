@@ -7,6 +7,6 @@ on:
 
 jobs:
   call-label-maintenance:
-    uses: slime-hatena/reusable-workflows/.github/workflows/label_maintenance.yaml@main
+    uses: slime-hatena/reusable-workflows/.github/workflows/label_maintenance.yml@main
     with:
       dry_run: true
