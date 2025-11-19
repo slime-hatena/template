@@ -3,18 +3,10 @@ on:
   push:
     paths:
       - '.github/labels.json'
-      - '.github/workflows/label_maintenance_dryrun.yml'
+  workflow_dispatch:
 
 jobs:
-  label_maintenance:
-    name: Label maintenance
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Get @azu/github-label-setup
-        run: npm install --global @azu/github-label-setup
-      - name: Run github-label-setup
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          github-label-setup --token ${GITHUB_TOKEN} --labels ${GITHUB_WORKSPACE}/.github/labels.json --dry-run
+  call-label-maintenance:
+    uses: slime-hatena/reusable-workflows/.github/workflows/label_maintenance.yml@main
+    with:
+      dry_run: true
