@@ -1,4 +1,4 @@
-name: 'Pull Request to main'
+name: 'Push main'
 on:
   push:
     branches:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   skip:
-    uses: slime-hatena/reusable-workflows/.github/workflows/initialize_repository.yml@main
+    uses: slime-hatena/reusable-workflows/.github/workflows/check_release_skip.yml@main
   ci:
     uses: ./.github/workflows/ci.yml
     needs: [skip]
@@ -19,5 +19,7 @@ jobs:
       version: '${{ needs.calc_version.outputs.version }}'
     needs: [calc_version]
   create_release:
-    uses: slime-hatena/reusable-workflows/.github/workflows/initialize_repository.yml@main
+    uses: slime-hatena/reusable-workflows/.github/workflows/create_release.yml@main
+    with:
+      version: '${{ needs.calc_version.outputs.version }}'
     needs: [build]
