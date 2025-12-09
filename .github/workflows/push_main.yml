@@ -12,7 +12,7 @@ jobs:
     needs: [skip]
   calc_version:
     uses: slime-hatena/reusable-workflows/.github/workflows/calc_version.yml@main
-    needs: [skip]
+    needs: [ci]
   build:
     uses: ./.github/workflows/build.yml
     with:
