@@ -22,4 +22,7 @@ jobs:
     uses: slime-hatena/reusable-workflows/.github/workflows/create_release.yml@main
     with:
       version: '${{ needs.calc_version.outputs.version }}'
-    needs: [build]
+    needs: [calc_version, build]
+  repository_initialize:
+    uses: slime-hatena/reusable-workflows/.github/workflows/initialize_repository.yml@main
+    needs: [create_release]
