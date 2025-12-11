@@ -23,6 +23,3 @@ jobs:
     with:
       version: '${{ needs.calc_version.outputs.version }}'
     needs: [calc_version, build]
-  repository_initialize:
-    uses: slime-hatena/reusable-workflows/.github/workflows/initialize_repository.yml@main
-    needs: [create_release]
